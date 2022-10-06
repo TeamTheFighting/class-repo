@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* input태그로부터 데이터를 입력받는 경우
+         1 함수 2 함수 3함수 실행
+         
+        함수의 구성: 선언부 및 정의부 . 실행부 선언부 및 정의부
+
+        정의:
+        function func1(obj1,obj2){
+            res = obj1 + obj2;
+            return res;
+        }
+        addEbentListner("click",function(){
+
+        })
+         
+        실행부 : 함수의 이름과 데이터를 삽입하여 함수모듈을 실행하게 해주는 부분
+        실행부가 꼭 필요함:
+        func1(10,20);
+
+        함수 실행순서:
+        브라우저 실행 > HTML엘리먼트 호출 > 코드해석 > 함수발견 > 함수실행 > 함수실행 완료후 호출한 위치로 복귀 
+        > 원래코드 실행
+        
+
+        변수의 존속성
+        변수의 지역성 : 변수는 기본적으로 코드블럭 내에서만 존재
+        (코드블럭 - { } )
+        변수 선언후 코드블럭이 종료될때까지 메모리상에 존재(지역변수)
+        코드블럭 내에서 선언된 변수는 모두 지역변수이다
+
+        함수 실행시 현재까지 실행되던 내역은 모드 스택이라는 메모리 영역안에 보관후 실행함수로 제어를 이동하여 초기화 
+        > 함수 실행이 완료되면 초기화된 변수들은 메모리 영역에서 삭제
+
+        지역변수는 코드블럭 에서만 사용가능
+        코드블럭 실행시 생성되고 코드블럭 종료시 삭제
+
+        변수의 전역성 : 코드블럭 외부에서 선언된 변수
+        모든 코드블럭에서 사용가능
+        전역변수는 프로그램 종료시 삭제
+
+        함수간 통신방법( 데이터 이동)
+        함수는 기본적으로 페쇄적 구조 형태 > 함수간 데이터 공유 불가
+        함수간 통신을 위한 방법 : 데이터 삼입부와 출력부를 이용해서 통신 ,
+        데이터 삽입(인수(피라미터,메개변수)  ) 실행함수에 데이터 전달 
+        sum(10,20,30,40);
+        10과 20의 데이터를 매개변수 a 와 b 에 전달
+        a = 10 , b = 20 저장
+
+        "반환"값 : 실행함수에서 호출함수로 전달하는 데이터
+
+        function sum(a ,b , c , d , ){
+            return (a + b);
+        }
+        result = sum(23,12);
+        "변 수" result 는 35의 값을 가지게 된다. 
+
+        함수, 메소드의 차이 : 귀속여부 > 함수는 
+        독립적인 코드 메소드는 귀속되어서 사용되는 코드
+        
+        */
+
+      //  var res = total(5,20);// 원하는 숫자 범위의 총합구하기
+      //  document.write(res +"<br>")
+      //  var res = total(13,56)
+      //  document.write(res +"<br>")
+      //  
+      //  function total(a,b){
+      //      var sum=0;
+      //      for(var i = 5; i <=20; i++){
+      //          sum += i
+      //      }
+      //      return sum;
+      //  }
+//
+      //  //함수의 4가지 형태
+      //  //1 입력x 출력 x 
+      //  function func1(){
+      //      document.write("매개변수 없고 반환도 없다");
+      //  }
+      //  // 2 입력 o , 출력 x 
+      //  function func2(birth){
+      //      var age = 2022 - parseInt(birth.substring(0,4));
+      //      document.write("나이는"+age+"살 먹었습니다");
+      //  }
+//
+      //  //3. 입력 x , 출력 o
+      //  function func3(){
+      //      var num = document.querySelector("#number");
+      //      num = parseInt(num);
+//
+      //      return num +"번 입니다";
+      //  }
+//
+      //  //4. 입력과 출력 둘다 있음;
+      //  function func4(po , mu , sta){
+      //      if(sta > 0) mu = 1;
+//
+      //      return (po*mu);
+      //  }
+//
+      //  function input(a){
+      //      
+//
+      //  }
+
+      var number = 0;
+      var oldnumber = 0;
+      var opd=null;
+      var result = 0;
+      var flag= false;
+
+      window.onload=function(){
+        var num = document.querySelectorAll(".num");
+        var op = document.querySelectorAll(".op");
+
+        for(var i=0;i<num.length;i++){
+            num[i].addEventListener("click",function(){
+                number = parseInt(this.dataset.value);
+                calc()
+                
+
+            })
+        }
+        for(var i=0; i<op.length; i++){
+            op[i].addEventListener("click",function(){
+                opd = this.dataset.value;
+                flag=true;
+                calc();
+            })
+        }
+    }
+
+      function calc(){
+        if(flag){
+            oldnumber = number;
+            flag=false;
+            number = 0
+        }
+        if(oldnumber !=0 && number !=0){
+            selectop();
+            document.querySelector("#result").innerHTML = result;
+        }
+        
+      }
+      function selectop(){
+        switch(opd){
+
+        case "+":
+        result = oldnumber+number;
+        break ;
+        case "-":
+        result = oldnumber-number;
+        break ;
+        case "*":
+        result = oldnumber*number;
+        break 
+        case "/":
+        result = oldnumber/number;
+        break 
+        }
+        
+      }
+
+    </script>
+    <style>
+        table tr td{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            font-size: 35px;
+            text-align: center;
+        }
+        .op{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <div id="box">
+        <table>
+            <tr>
+                <td class="num" data-value="7">7</td>
+                <td class="num" data-value="8">8</td>
+                <td class="num" data-value="9">9</td>
+                <td class="op" data-value="/">/</td>
+            </tr>
+            <tr>
+                <td class="num" data-value="4">4</td>
+                <td class="num" data-value="5">5</td>
+                <td class="num" data-value="6">6</td>
+                <td class="op" data-value="*">*</td>
+            </tr>
+            <tr>
+                <td class="num" data-value="1">1</td>
+                <td class="num" data-value="2">2</td>
+                <td class="num" data-value="3">3</td>
+                <td class="op" data-value="-">-</td>
+            </tr>
+            <tr>
+                <td class="num" colspan="2" data-value="0">0</td>
+                <td class="op" data-value="=">=</td>
+                <td class="op" data-value="+">+</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
