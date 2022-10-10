@@ -13,14 +13,17 @@ body {
 .banner {
   width: 1000px;
   height: 240px;
-  background-image: url(image/img_top_b.jpg);
+  background-color: brown;
   background-position: center;
   background-size: cover;
+  text-align: center;
+  font-size: 60px;
+  padding-top: 150px;
+  color: white;
 }
-.nav {
-  background-color: #ae0000;
+.nav{
+  background-color: pink;
 }
-
 .nav ul {
   display: flex;
   justify-content: space-around;
@@ -28,27 +31,25 @@ body {
   padding-left: 0px;
   margin: 0px;
 }
-
 .nav ul li {
   cursor: pointer;
   border-radius: 10px 10px 0px 0px;
-  background-color: #c24040;
+  background-color: lightsalmon;
   padding: 3%;
   flex-basis: 25%;
   text-align: center;
   font-size: 30px;
   color: #fff;
 }
-
+.nav ul li:hover {
+  background-color: #ffffff;
+  color: #4e4e4e;
+}
 .nav ul li:hover {
   background-color: #ffffff;
   color: #4e4e4e;
 }
 
-.nav ul li:hover {
-  background-color: #ffffff;
-  color: #4e4e4e;
-}
 
 .menu-wrapper {
   display: grid;
@@ -79,17 +80,15 @@ body {
 .menu-info p {
   color: #4b5156;
   font-size: 14px;
-  font-family: 'Roboto Mono', monospace;
 }
 a {
   text-decoration: none;
   font-size: 20px;
-  color: #17a2b8;
+  color: #24bb4a;
 }
 .my-menu {
   height: 50px;
 }
-
 .order {
   display: flex;
   justify-content: space-around;
@@ -97,17 +96,22 @@ a {
   background-color: #777;
   height: auto;
 }
-
 .order button {
   outline: none;
   border: 0;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #82be00;
+  background-color: red;
   color: #fff;
   font-size: 26px;
   width: 280px;
   height: 60px;
+}
+.order button :hover {
+  background-color: #ffffff;
+  color: #e8ff3b;
+  cursor: pointer;
+
 }
 .order p {
   color: #fff;
