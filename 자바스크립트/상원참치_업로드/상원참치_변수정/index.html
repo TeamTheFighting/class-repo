@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상원참치</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="banner"></div>
+        <div class="nav">
+          <ul>
+            <li>전체 메뉴</li>
+            <li>오늘의 메뉴</li>
+            <li>베스트 메뉴</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="menu-wrapper">
+          <div class="menu">
+            <img src="image/img_con01.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>8일 숙성</span></p>
+              <p>가격 : <span>22,000</span></p>
+              <a id="fattyTuna8" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con02.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>2일 숙성</span></p>
+              <p>가격 : <span>10,000</span></p>
+              <a id="fattyTuna2" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con03.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 등살</h6>
+              <p>숙성 : <span>3일 숙성</span></p>
+              <p>가격 : <span>12,000</span></p>
+              <a id="bestPartOfRed3" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con04.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>5일 숙성</span></p>
+              <p>가격 : <span>16,000</span></p>
+              <a id="fattyTuna5" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con06.jpg" />
+            <div class="menu-info" onclick="SetSpecialTuna()">
+              <h6>참다랑어 스페셜 세트</h6>
+              <p>숙성 : <span>5일 숙성</span></p>
+              <p>가격 : <span>32,000</span></p>
+              <a id="specialSet" href="#" style="color: red">품절</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="order">
+          <button type="button" id="order" onclick="order()">주문하기</button>
+          <p>총 주문 금액 : <span id="totalMoney">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* 
+      맛좋은 상원참치에 오신걸 환영합니다. 👨‍🍳
+      아래 4문제를 10월 11일 17:30 까지 풀어주세요~!
+
+      1번 문제: 전체 메뉴, 오늘의 메뉴, 베스트 메뉴를 클릭하게 되면
+      클릭한 메뉴에 css 적용할 것 (background-color: #ffffff; color: #4e4e4e;) //완료
+
+      2번 문제: 담기를 클릭하면 총 주문 금액에 클릭한 가격 표기할 것
+      단, 참다랑어 스페셜 세트는 품절이기 때문에 총 주문 금액에 포함될 수 없다.
+
+      3번 문제: 참다랑어 스페셜 세트를 클릭하면
+      "죄송합니다. 참다랑어 세트는 품절입니다." alert창 띄우기 
+      ->했음
+
+      4번 문제: 주문하기 버튼을 누르면 "주문 완료" alert창 띄우고, => 했음
+      총 주문 금액 0원으로 리셋하기
+      */
+
+      // 문제 1.
+
+      window.onload = function(){
+        var menu = document.querySelectorAll(".nav li"); // li 자체를 불러옴
+        for(var i=0; i<menu.length; i++){ // li에 인덱스 번호 주기위해
+          menu[i].addEventListener("click",function(){ // 전체 li 에 이벤트 설정
+            for(var j=0; j<menu.length; j++){ // 다른 애한테는 초기화하려고 사용
+              menu[j].style.background = "#c24040";
+              menu[j].style.color = "#fff";
+            }
+            this.style.background = "#ffffff";
+            this.style.color ="#4e4e4e";
+          });
+        }
+        
+      }
+      // function ClickMenu(n){
+      //   var menu = document.getElementById("menu_"+n); // 메뉴 아이디 가져옴
+      //   menu.style.backgroundColor="#ffffff"; // 배경색 바꿈
+      //   menu.style.color="#4e4e4e"; // 글자색 바꿈
+
+      // }
+      // 문제 2.
+
+      //querySelectorAll : for 문이나 while을 사용해야함! 하나 하나의 기능을 주기 위해
+        var totalmoeny = document.getElementById("totalMoney");
+        var menu = document.querySelectorAll(".menu-info a");
+        var price = 0;
+
+        for( var i=0; i<menu.length; i++){
+          menu[i].addEventListener("click",function(){
+              switch(this.id){
+                case "fattyTuna8": price += 22000;
+                break;
+
+                case "fattyTuna2" : price += 10000;
+                break;
+
+                case "bestPartOfRed3" :price +=12000;
+                break;
+
+                case "fattyTuna5" : price +=16000;
+                break;
+              }
+              totalmoeny.innerHTML = price; //price 가격 표출
+          });
+        }
+
+
+
+      // 문제 3.
+        function SetSpecialTuna(){
+          alert("죄송합니다. 참다랑어 세트는 품절입니다.");
+        }
+      // 문제 4.
+      function order(){
+        alert("주문 완료");
+
+        totalmoeny.innerHTML = 0; // 0원으로 변경
+      }
+
+
+    </script>
+  </body>
+</html>
