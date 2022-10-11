@@ -58,24 +58,63 @@
             </div>
           </div>
           <div class="menu">
-            <img src="image/img_con06.jpg" />
+            <img onclick="javascript:btn()" src="image/img_con06.jpg" />
             <div class="menu-info">
-              <h6>참다랑어 스페셜 세트</h6>
-              <p>숙성 : <span>5일 숙성</span></p>
-              <p>가격 : <span>32,000</span></p>
-              <a id="specialSet" href="#" style="color: red">품절</a>
+              <h6 onclick="javascript:btn()">참다랑어 스페셜 세트</h6>
+              <p>숙성 : <span onclick="javascript:btn()">5일 숙성</span></p>
+              <p>가격 : <span onclick="javascript:btn()">32,000</span></p>
+              <a id="specialSet" href="#" style="color: red"
+                onclick="javascript:btn()">품절</a>
             </div>
           </div>
         </div>
       </div>
       <div class="footer">
         <div class="order">
-          <button type="button" id="order">주문하기</button>
-          <p>총 주문 금액 : <span id="totalMoney">0</span></p>
+          <button type="button" value="주문 및 초기화" 
+                  id="order" onclick="javascript:btn2();reset();">주문하기</button>
+          <p>총 주문 금액 : <type="text" value="계산 결과" onclick="cal()"
+                  id="totalMoney" span>0</type=></p>
         </div>
       </div>
     </div>
     <script>
+// 다랑어 품절 안내 팝업
+      function btn(){
+      alert('죄송합니다. 참다랑어 세트는 품절입니다.')};
+// 주문 완료 안내 팝업
+      function btn2(){
+      alert('주문 완료')};
+
+
+
+// 메뉴들 각 가격~~~~~~~~~~
+    function cal(){
+      var fattyTuna8 =document.getElementById(+22000).value= +22000;
+      var fattyTuna2 =document.getElementById(+10000).value= +10000;
+      var bestPartOfRed3 =document.getElementById(+12000).value= +12000;
+      var fattyTuna5 =document.getElementById(+16000).value= +16000;
+      var specialSet =document.getElementById(+0).value= 0;
+
+      
+      function calculate(e) {
+  const value = e.target.value;
+    };      
+// 총 주문 값이 얼만지 ~~~~~~~~~~~~~~~~~
+      function cal(){
+      alert('음식값은 총 얼마?일예정.')
+      };
+
+// 주문 끝냈으니 리셋!~~~~~~~~~~~~~~~~~
+      function reset(){ 
+      alert('주문했으니까 리셋할 예정.')
+      var fattyTuna8 =document.getElementById(+22000).value='';
+      var fattyTuna2 =document.getElementById(+10000).value='';
+      var bestPartOfRed3 =document.getElementById(+12000).value='';
+      var fattyTuna5 =document.getElementById(+16000).value='';
+      var specialSet =document.getElementById(+0).value='';
+
+      };
       /* 
       맛좋은 상원참치에 오신걸 환영합니다. 👨‍🍳
       아래 4문제를 10월 11일 17:30 까지 풀어주세요~!
@@ -86,12 +125,13 @@
       2번 문제: 담기를 클릭하면 총 주문 금액에 클릭한 가격 표기할 것
       단, 참다랑어 스페셜 세트는 품절이기 때문에 총 주문 금액에 포함될 수 없다.
 
-      3번 문제: 참다랑어 스페셜 세트를 클릭하면
+      ========3번 문제: 참다랑어 스페셜 세트를 클릭하면
       "죄송합니다. 참다랑어 세트는 품절입니다." alert창 띄우기
 
-      4번 문제: 결제하기 버튼을 누르면 "주문 완료" alert창 띄우고,
+      ===4번 문제: 결제하기 버튼을 누르면 "주문 완료" alert창 띄우고,
       총 주문 금액 0원으로 리셋하기
       */
+
     </script>
   </body>
 </html>
