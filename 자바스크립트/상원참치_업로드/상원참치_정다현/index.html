@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상원참치</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="background: #79a88e;">
+    <div class="container">
+      <div class="header">
+        <div class="banner"></div>
+        <div class="nav">
+          <ul>
+            <li class="nav_listLi">전체 메뉴</li>
+            <li class="nav_listLi">오늘의 메뉴</li>
+            <li class="nav_listLi">베스트 메뉴</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="menu-wrapper">
+          <div class="menu">
+            <img src="image/img_con01.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>8일 숙성</span></p>
+              <p>가격 : <span class="price">22,000</span></p>
+              <a id="fattyTuna8" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con02.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>2일 숙성</span></p>
+              <p>가격 : <span class="price">10,000</span></p>
+              <a id="fattyTuna2" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con03.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 등살</h6>
+              <p>숙성 : <span>3일 숙성</span></p>
+              <p>가격 : <span class="price">12,000</span></p>
+              <a id="bestPartOfRed3" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con04.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 뱃살</h6>
+              <p>숙성 : <span>5일 숙성</span></p>
+              <p>가격 : <span class="price">16,000</span></p>
+              <a id="fattyTuna5" href="#">담기</a>
+            </div>
+          </div>
+          <div class="menu">
+            <img src="image/img_con06.jpg" />
+            <div class="menu-info">
+              <h6>참다랑어 스페셜 세트</h6>
+              <p>숙성 : <span>5일 숙성</span></p>
+              <p>가격 : <span class="price">32,000</span></p>
+              <a id="specialSet" href="#" style="color: red">품절</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="order">
+          <button type="button" id="order">주문하기</button>
+          <p>총 주문 금액 : <span id="totalMoney">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* 
+      맛좋은 상원참치에 오신걸 환영합니다. 👨‍🍳
+      아래 4문제를 10월 11일 17:30 까지 풀어주세요~!
+
+      1번 문제: 전체 메뉴, 오늘의 메뉴, 베스트 메뉴를 클릭하게 되면
+      클릭한 메뉴에 css 적용할 것 (background-color: #ffffff; color: #4e4e4e;)
+
+      2번 문제: 담기를 클릭하면 총 주문 금액에 클릭한 가격 표기할 것
+      단, 참다랑어 스페셜 세트는 품절이기 때문에 총 주문 금액에 포함될 수 없다.
+
+      3번 문제: 참다랑어 스페셜 세트를 클릭하면
+      "죄송합니다. 참다랑어 세트는 품절입니다." alert창 띄우기
+
+      4번 문제: 결제하기 버튼을 누르면 "주문 완료" alert창 띄우고,
+      총 주문 금액 0원으로 리셋하기
+
+      9.30, 10.5, 10.6, 10.7 오전파일 참고
+      */
+    
+    // 1번 문제: 전체 메뉴, 오늘의 메뉴, 베스트 메뉴를 클릭하게 되면 클릭한 메뉴에 css 적용할 것.
+    var nav_listLi = document.querySelectorAll(".nav_listLi");
+    function clickMenu(){
+      for(var i = 0; i < nav_listLi.length; i++){
+        nav_listLi[i].style.background = "#c24040";
+        nav_listLi[i].style.color = "#fff";
+      }
+
+      // this.classList.add("menuActive");
+      this.style.background = "#fff";
+      this.style.color = "#4e4e4e";
+    }
+
+    for(var i = 0; i < nav_listLi.length; i++){
+        nav_listLi[i].addEventListener("click", clickMenu);
+    }
+
+    
+    // 2번 문제: 담기를 클릭하면 총 주문 금액에 클릭한 가격 표기할 것. 단, 참다랑어 스페셜 세트는 품절이기 때문에 총 주문 금액에 포함될 수 없다.
+    // 3번 문제: 참다랑어 스페셜 세트를 클릭하면 "죄송합니다. 참다랑어 세트는 품절입니다." alert창 띄우기.
+    var price = document.querySelectorAll(".price");
+    var totalValue = 0;
+    var total = document.querySelector("#totalMoney");
+    var set = document.querySelectorAll("#fattyTuna8, #fattyTuna2, #bestPartOfRed3, #fattyTuna5, #specialSet");
+    var priceValue = new Array();
+    for(var i = 0; i < price.length; i++) { // priceValue 배열에 데이터 주입
+      priceValue.push(parseInt(price[i].textContent) * 1000);
+    }
+    priceValue[4] = 0;
+
+    for(var i = 0; i < set.length; i++){
+      set[i].addEventListener("click", clickAlink);
+    }
+
+      // set[0].addEventListener("click", totalPrice(priceValue[0]));
+      // set[1].addEventListener("click", totalPrice(priceValue[1]));
+      // set[2].addEventListener("click", totalPrice(priceValue[2]));
+      // set[3].addEventListener("click", totalPrice(priceValue[3]));
+      // set[4].addEventListener("click", totalPrice(priceValue[4]));
+    function clickAlink(event){
+
+    }
+
+    function totalPrice(value){
+      total.innerHTML = "";
+      if(value == priceValue[4]) alert("죄송합니다. 참다랑어 세트는 품절입니다.");
+      totalValue += parseInt(value);
+      total.innerHTML = totalValue;
+    }
+
+    // 4번 문제: 결제하기 버튼을 누르면 "주문 완료" alert창 띄우고, 총 주문 금액 0원으로 리셋하기.
+    var order = document.querySelector("#order");
+    order.addEventListener("click", orderClear);
+    function orderClear(){
+      alert("주문 완료");
+      total.innerHTML = 0;
+    }
+    </script>
+  </body>
+</html>
