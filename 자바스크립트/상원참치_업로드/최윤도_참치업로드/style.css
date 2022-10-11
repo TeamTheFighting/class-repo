@@ -17,6 +17,12 @@ body {
   background-position: center;
   background-size: cover;
 }
+p{
+  font-family: "궁서";
+}
+span{
+  font-family: "궁서";
+}
 .nav {
   background-color: #ae0000;
 }
@@ -27,7 +33,6 @@ body {
   list-style: none;
   padding-left: 0px;
   margin: 0px;
-  
 }
 
 .nav ul li {
@@ -40,22 +45,16 @@ body {
   font-size: 30px;
   color: #fff;
 }
-.nav ul li:visited{
-  background-color: #ffffff; 
-  color: #4e4e4e;
-  transition: 2s;
-}
-.nav ul li:hover {
-  background-color: #ffffff;
-  color: #4e4e4e;
-  transition: 0.3s;
-}
 
 .nav ul li:hover {
   background-color: #ffffff;
   color: #4e4e4e;
 }
 
+.section {
+  background-color: rgba(232, 232, 232, 0.5);
+  height: auto;
+}
 .menu-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
@@ -72,6 +71,9 @@ body {
   height: 200px;
   object-fit: cover;
 }
+.menu:hover {
+  border: 3px solid black;
+}
 .menu-info {
   background-color: #fff;
   padding: 3%;
@@ -81,12 +83,10 @@ body {
   font-size: 20px;
   font-weight: 600;
   color: black;
-  
 }
 .menu-info p {
   color: #4b5156;
   font-size: 14px;
-  font-family: 'Roboto Mono', monospace;
 }
 a {
   text-decoration: none;
@@ -119,7 +119,4 @@ a {
 .order p {
   color: #fff;
   font-size: 30px;
-}
-.totalMoney{
-
 }

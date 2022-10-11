@@ -27,7 +27,6 @@ body {
   list-style: none;
   padding-left: 0px;
   margin: 0px;
-  
 }
 
 .nav ul li {
@@ -40,22 +39,16 @@ body {
   font-size: 30px;
   color: #fff;
 }
-.nav ul li:visited{
-  background-color: #ffffff; 
-  color: #4e4e4e;
-  transition: 2s;
-}
-.nav ul li:hover {
-  background-color: #ffffff;
-  color: #4e4e4e;
-  transition: 0.3s;
-}
 
 .nav ul li:hover {
   background-color: #ffffff;
   color: #4e4e4e;
 }
 
+.section {
+  background-color: rgba(232, 232, 232, 0.5);
+  height: auto;
+}
 .menu-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
@@ -81,7 +74,6 @@ body {
   font-size: 20px;
   font-weight: 600;
   color: black;
-  
 }
 .menu-info p {
   color: #4b5156;
@@ -119,7 +111,4 @@ a {
 .order p {
   color: #fff;
   font-size: 30px;
-}
-.totalMoney{
-
 }
