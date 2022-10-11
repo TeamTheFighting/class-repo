@@ -45,10 +45,11 @@ body {
   color: #4e4e4e;
 }
 
-.section {
-  background-color: rgba(232, 232, 232, 0.5);
-  height: auto;
+.nav ul li:hover {
+  background-color: #ffffff;
+  color: #4e4e4e;
 }
+
 .menu-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
