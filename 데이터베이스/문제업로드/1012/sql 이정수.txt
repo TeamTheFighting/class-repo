@@ -1,135 +1,100 @@
-
+1
  SELECT ename , empno , sal FROM emp
- 
+ 2
   SELECT empno , mgr ,hiredate, ename FROM emp WHERE mgr = 7839
- 
+ 3번
  SELECT * FROM emp WHERE sal <= 3000
- 
+ 4번
  SELECT e.ename , e.DEptno , d.dname, d.loc 
 FROM emp AS e INNER JOIN dept AS d
  ON e.DEPTNO = d.DEPTNO
- 
+ 5번
  SELECT sum(sal) , d.dname FROM emp AS e
  INNER JOIN dept AS d ON e.ename = d.dname 
- 
+ 6번
  SELECT d.loc , e.job , e.ename, e.sal 
  FROM emp AS e
  INNER JOIN dept AS d 
  ON e.ename = d.dname WHERE loc = "NEW YORK" OR job = 'MANAGER' 
-
+7번
  SELECT ifnull(comm,100),HIREDATE , e.comm , d.dname , e.job
  FROM emp AS e INNER JOIN dept AS d 
  ON e.ename  = d.dname  WHERE HIREDATE <= 1983
- 
+ 8번
  SELECT d.dname , e.ename , LOC
  from emp AS e INNER JOIN dept AS d
  ON e.DEPTNO  = d.DEPTNO WHERE D.DNAME  = "RESEARCH"
- 
+ 9번
  SELECT e.ename , e.job , e.sal , d.dname,e.comm
  FROM emp AS e INNER JOIN dept AS d 
  ON e.DEPTNO  = d.DEPTNO WHERE e.comm IS NOT NULL
- 
+ 10번
  SELECT e.ename , e.job  , d.loc , d.dname
  FROM emp AS e INNER JOIN dept AS d 
  ON e.DEPTNO  = d.DEPTNO  WHERE ename LIKE "A%"
- 
+ 11번
  SELECT e.ename , e.mgr , d.ename
  FROM emp AS e left JOIN emp AS d
  ON e.mgr = d.empno 
- 
+ 12번
  SELECT e.ename , e.mgr , d.ename
  FROM emp AS e left JOIN emp AS d
  ON e.mgr = d.empno WHERE e.mgr IS NULL
+ 13번
+ 14번
  
  15문제
  SELECT e.empno, e.ename, e.sal, e.job, d.dname 
  FROM emp AS e INNER JOIN dept AS d 
  ON e.DEPTNO  = d.DEPTNO  WHERE (job = 'MANAGER' OR job = "CLERK")
  AND date_format(HIREDATE,"%Y")  = 1982
- 16
- SELECT ename , empno , sal FROM emp
  
-  SELECT empno , mgr ,hiredate, ename FROM emp WHERE mgr = 7839
- 
- SELECT * FROM emp WHERE sal <= 3000
- 
- SELECT e.ename , e.DEptno , d.dname, d.loc 
-FROM emp AS e INNER JOIN dept AS d
- ON e.DEPTNO = d.DEPTNO
- 
- SELECT sum(sal) , d.dname FROM emp AS e
- INNER JOIN dept AS d ON e.ename = d.dname 
- 
- SELECT d.loc , e.job , e.ename, e.sal 
- FROM emp AS e
- INNER JOIN dept AS d 
- ON e.ename = d.dname WHERE loc = "NEW YORK" OR job = 'MANAGER' 
-
- SELECT ifnull(comm,100),HIREDATE , e.comm , d.dname , e.job
- FROM emp AS e INNER JOIN dept AS d 
- ON e.ename  = d.dname  WHERE HIREDATE <= 1983
- 
- SELECT d.dname , e.ename , LOC
- from emp AS e INNER JOIN dept AS d
- ON e.DEPTNO  = d.DEPTNO WHERE D.DNAME  = "RESEARCH"
- 
- SELECT e.ename , e.job , e.sal , d.dname,e.comm
- FROM emp AS e INNER JOIN dept AS d 
- ON e.DEPTNO  = d.DEPTNO WHERE e.comm IS NOT NULL
- 
- SELECT e.ename , e.job  , d.loc , d.dname
- FROM emp AS e INNER JOIN dept AS d 
- ON e.DEPTNO  = d.DEPTNO  WHERE ename LIKE "A%"
- 
- SELECT e.ename , e.mgr , d.ename
- FROM emp AS e left JOIN emp AS d
- ON e.mgr = d.empno 
- 
- SELECT e.ename , e.mgr , d.ename
- FROM emp AS e left JOIN emp AS d
- ON e.mgr = d.empno WHERE e.mgr IS NULL
- 
- 15문제
- SELECT e.empno, e.ename, e.sal, e.job, d.dname 
- FROM emp AS e INNER JOIN dept AS d 
- ON e.DEPTNO  = d.DEPTNO  WHERE (job = 'MANAGER' OR job = "CLERK")
- AND date_format(HIREDATE,"%Y")  = 1982
- 16
+ 16번
  SELECT sum(sal)
  FROM emp AS e right JOIN dept as d ON e.DEPTNO = d.DEPTNO 
  GROUP BY d.dname ORDER BY sum(sal) desc
  
+ 17번
  SELECT e.ename , b.ename , e.empno , d.loc, d.DEPTNO
  FROM emp AS e inner JOIN emp as b
  RIGHT JOIN dept AS d
  ON e.DEPTNO = d.DEPTNO AND e.DEPTNO  = d.DEPTNO 
  
+ 18번
 SELECT s.empno, s.ename, s.mgr, b.ename, b.sal, d.dname
 FROM emp AS s LEFT JOIN emp AS b ON s.mgr = b.EMPNO 
 INNER JOIN dept AS d ON s.deptno = d.DEPTNO 
 WHERE d.loc = "CHICAGO" AND b.sal < 5000
 ORDER BY s.HIREDATE 
 
+19번
 SELECT date_format(hiredate,"%m"),count(*) FROM emp 
 GROUP BY date_format(HIREDATE,"%m") 
 ORDER BY date_format(hiredate,"%m")  
- 
+
+ 20번
 SELECT e.deptno, d.dname, d.loc, count(e.deptno)
 FROM emp AS e right JOIN dept AS d 
 ON e.deptno = d.deptno GROUP BY d.deptno 
 
+21번
 SELECT ename, empno, HIREDATE 
 FROM emp WHERE date_format(HIREDATE,"%m") = 9 
 
+22번
 SELECT sum(sal), avg(sal) FROM emp
 WHERE HIREDATE >= "1981-02-22" AND job = "SALESMAN" 
  
+ 23번
 INSERT INTO emp (empno, ename, job, hiredate) VALUES (8080, "홍길동", "MANAGER", now())
  
+ 24번
 UPDATE emp SET mgr = 7839, sal = 500 WHERE empno = 8080
 
+25번
 DELETE FROM emp WHERE empno = 8080
 
+26번
 SELECT d.deptno, count(*), d.dname, d.loc
 FROM emp AS e RIGHT JOIN dept AS d ON e.deptno = d.DEPTNO GROUP BY d.deptno HAVING count(*) >= 4 
  
