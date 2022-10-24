@@ -1,3 +1,15 @@
+# DB ERD Modeling
+## DBeaver table entity
+<img src="DB모델링(최종).png">
+<hr>
+
+## ERwin table entity
+<img src="DB모델링1(최종).png">
+<hr>
+<br>
+
+# SQL 쿼리
+
 ### 관원 별 소속도장
 ```sql
 select b.name, m.ssno, g.gym_no, g.gym_name
