@@ -1,0 +1,218 @@
+-- 고객 테이블 데이터
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (1234,"김민서","1995-12-28",28,"대전광역시 동구 동구청로 35 (대성동)","010-5452-7894","1234@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (2345,"정다현","1997-05-05",26,"대전광역시 대덕구 동심4길 33 (대화동, 대진빌라)","010-6453-7589","2345@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (3456,"김기원","1999-10-11",24,"서울특별시 관악구 남부순환로251길 2 (봉천동, 화신빌라)","010-5485-6235","3456@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (4567,"김지연","1996-06-10",27,"경기도 부천시 소사로78번길 81 (소사본동)","010-7894-5216","4567@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5678,"장영주","1997-03-24",26,"대전광역시 동구 대전로 646 (효동)","010-3757-8235","5678@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (6789,"이지현","1987-12-30",36,"충청남도 논산시 해월로 281 (화지동)","010-2453-3265","6789@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7890,"최윤도","1996-07-14",27,"경상북도 김천시 모암사랑5길 25 (모암동)","010-7859-6245","7890@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8901,"윤재영","1998-03-13",25,"인천광역시 중구 인중로146번길 28 (사동)","010-5234-6524","8901@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (9012,"이정수","2003-04-20",20,"경상남도 김해시 김해대로 2721 (지내동, 명보그린빌라)","010-8523-9632","9012@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (1230,"임성민","1988-05-20",35,"서울특별시 노원구 섬밭로 232 (하계동)","010-7412-8523","1230@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7410,"이종빈","1998-10-09",25,"부산광역시 강서구 명지국제2로 16 (명지동)","010-2791-2383","7410@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8520,"변수정","1993-12-07",30,"대전광역시 유성구 가정로 43 (신성동)","010-7532-9512","8520@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (9630,"김민정","2002-10-13",21,"충청남도 공주시 신금1길 10 (신관동)","010-2458-6258","9630@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7530,"윤종찬","1994-06-30",29,"충청남도 논산시 해월로 281 (화지동)","010-7895-5263","7530@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (9510,"현상원","1993-05-02",30,"서울특별시 강남구 도산대로 446 (청담동)","010-4152-8596","9510@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (1591,"강다율","1993-08-20",30,"경기도 하남시 대청로 15 (신장동)","010-7485-9658","1591@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7537,"전계림","1988-01-01",35,"인천광역시 중구 하늘별빛로 86 (중산동)","010-5236-9568","7537@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8265,"엄효인","1994-08-09",29,"제주특별자치도 서귀포시 호근북로 10 (호근동)","010-7458-6248","8265@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (9547,"노주호","1992-02-27",31,"제주특별자치도 서귀포시 호근북로 10 (호근동)","010-7582-3459","9547@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8521,"장현주","1995-10-21",28,"대전광역시 동구 대전로 646 (효동)","010-4431-8235","8521@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (2586,"장범규","2000-11-01",23,"대전광역시 동구 대전로 646 (효동)","010-6249-8235","2586@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (3164,"한진솔","1997-01-15",26,"경기도 용인시 처인구 금령로173번길 14 (마평동)","010-2548-0115","3164@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (1346,"최은지","1997-12-16",26,"경상남도 통영시 북신로 42 (북신동, 만복빌라)","010-1216-5468","1346@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7946,"나은정","1997-12-08",26,"대전광역시 대덕구 신탄진로 215 (신대동)","010-7589-1208","7946@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8462,"박소미","1997-04-27",26,"전라남도 여수시 여문2로 110 (문수동)","010-0427-0324","8462@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (2648,"이소연","1997-09-08",26,"충청남도 부여군 부여읍 나성북로 21 (세진빌라)","010-0324-0908","2648@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (4268,"박솔","1997-05-17",26,"강원도 원주시 남원로 492 (단구동)","010-1997-0517","4268@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8642,"전진아","1997-04-16",26,"전라북도 전주시 완산구 당산로 99 (서신동)","010-0416-0324","8642@kakao.com")
+
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5136,"최서영","1997-06-01",26,"광주광역시 광산구 송정로51번길 15 (송정동)","010-0601-0061","5136@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7485,"박진희","1997-09-22",26,"대구광역시 달서구 달구벌대로 1834 (두류동)","010-0922-9220","7485@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5263,"고경은","1993-02-01",30,"충청남도 청양군 청양읍 중앙로3길 18 (한진빌라)","010-0201-0202","5263@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (4152,"문보라","1990-08-16",33,"충청남도 보령시 지장골길 161 (죽정동)","010-1990-0816","4152@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8596,"김양현","1992-11-12",31,"강원도 동해시 동해역길 24 (송정동)","010-1992-1112","8596@gmail.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5478,"이준하","1995-02-17",28,"대전광역시 서구 관저북로 52  (관저동)","010-1995-0217","5478@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5980,"김현주","1988-12-07",35,"대구광역시 동구 신암북로 77  (신암동)","010-1207-1988","598@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5412,"변은정","1991-07-23",32,"대전광역시 유성구 가정로 43  (신성동)","010-0723-1991","5412@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5632,"김하늘","1997-04-03",26,"충청남도 보령시 구시2길 14  (대천동)","010-1997-0403","5632@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (1027,"박지연","1997-07-17",26,"충청남도 보령시 대흥로 16 (대천동)","010-3714-0717","1027@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (7170,"천창희","1995-05-27",28,"전라북도 익산시 익산대로 181  (창인동2가)","010-7778-5127","7170@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (5300,"최한빛","1995-05-30",28,"세종특별자치시 새롬남로 102  (새롬동)","010-1995-0530","5300@naver.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8090,"최종원","1991-08-09",32,"부산광역시 연제구 해맞이로73번길 40  (거제동, 거제그린빌라)","010-0809-1991","8090@kakao.com")
+INSERT INTO client(client_ID,c_name,c_birth,c_age,c_address,c_hp,c_email) 
+VALUES (8250,"이시은","1994-08-25",29,"전라북도 임실군 임실읍 호국로  1716-18","010-0825-9941","8250@naver.com")
+
+
+-- 고객관리 테이블 데이터
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("N1",100026,"카드","2022-10-21","2022-11-20","베이직",9500,"2015-07-28","N","Y","N",1234,"165-87-00119")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V13",400085,"핸드폰","2022-10-23","2022-11-22","프리미엄",16000,"2022-10-23","Y","Y","N",8090,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T11",400057,"계좌이체","2021-12-15","2022-01-14","베이직",9000,"2021-12-15","Y","N","Y",8250,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("N10",400075,"핸드폰","2022-10-22","2022-11-21","베이직",9500,"2019-07-28","N","Y","N",5300,"165-87-00119")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V12",400085,"핸드폰","2022-10-23","2022-11-22","프리미엄",16000,"2022-10-23","Y","Y","N",7170,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V11",400095,"핸드폰","2022-10-23","2022-11-22","스탠다드",12500,"2019-12-24","N","Y","N",1027,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("D3",400021,"카드","2022-10-16","2022-11-15","베이직",9900,"2021-11-25","N","N","N",5632,"220-81-03347")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T10",400032,"계좌이체","2020-10-03","2020-11-02","프리미엄",16000,"2020-10-03","Y","N","N",5412,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T9",400015,"핸드폰","2022-10-13","2022-11-12","스탠다드",12500,"2021-10-21","N","N","N",5980,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V10",400058,"카드","2019-11-02","2019-12-01","베이직",9000,"2019-11-02","N","N","Y",5478,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T8",400057,"계좌이체","2021-12-15","2022-01-14","베이직",9000,"2021-12-15","Y","N","Y",8596,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("W4",400026,"카드","2022-10-11","2022-11-10","프리미엄",12900,"2022-02-01","N","Y","N",4152,"211-88-66013")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("W3",400012,"핸드폰","2021-08-24","2021-09-23","프리미엄",12900,"2021-08-24","N","N","Y",5263,"211-88-66013")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("N8",300025,"계좌이체","2022-10-15","2022-11-14","프리미엄",17000,"2018-04-02","N","Y","N",8642,"165-87-00119")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("D2",300085,"카드","2022-03-26","2022-04-25","베이직",9900,"2022-03-26","Y","Y","Y",5136,"220-81-03347")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("N9",400025,"핸드폰","2022-10-12","2022-11-11","베이직",9500,"2018-07-27","N","Y","N",7485,"165-87-00119")
+
+SELECT Host,USER,plugin,authentication_string FROM mysql.USER
+
+CREATE USER 'users'@'%' identified BY '1234';
+
+GRANT ALL ON *.* TO users@'%'
+
+flush PRIVILEGES
+
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V4",200054,"카드","2021-11-15","2021-12-14","스탠다드",12500,"2021-11-15","N","Y","Y",9510,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T4",200034,"무통장입금","2020-11-21","2020-12-20","프리미엄",16000,"2020-11-21","N","Y","Y",1591,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("N7",200045,"계좌이체","2015-07-28","2015-08-27","베이직",9500,"2015-07-28","Y","Y","Y",7537,"165-87-00119")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V5",200087,"핸드폰","2021-10-21","2021-11-10","스탠다드",12500,"2021-10-21","Y","N","Y",8265,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T5",200048,"카드","2020-12-25","2021-01-24","스탠다드",12500,"2020-12-25","Y","Y","N",9547,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T6",200017,"계좌이체","2021-03-24","2021-04-23","베이직",9000,"2021-03-24","Y","N","N",8521,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V6",200075,"핸드폰","2022-10-08","2022-11-07","베이직",9000,"2019-12-15","N","Y","N",2586,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V7",200015,"핸드폰","2022-10-02","2022-11-01","2022-11-01",16000,"2020-12-15","N","Y","N",3164,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("W2",200016,"계좌이체","2022-10-03","2022-11-02","베이직",7900,"2017-03-24","N","N","N",1346,"211-88-66013")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("T7",300012,"무통장입금","2022-10-05","2022-11-04","베이직",9000,"2020-10-03","N","Y","N",7946,"188-88-01893")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V8",300078,"계좌이체","2022-09-15","2022-10-14","스탠다드",12500,"2022-09-15","Y","N","Y",8462,"220-88-38020")
+INSERT INTO member_management(member_number,approval_number,payment_method,payment_date,exoiration_date,
+membership,price,join_date,dormant_account,adult_certification,withdrawal_status,client_ID,business_number)
+VALUES ("V9",300058,"카드","2019-03-24","2019-04-23","베이직",9000,"2019-03-24","N","Y","Y",2648,"220-88-38020")
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('N2',   100045,   '계좌이체',   '2022-10-23',   '2022-11-22',   '스탠다드',   13500,   '2021-07-27',   'N',   'Y',   'N')
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('N3', 100025 ,'핸드폰   ','2020-03-24',   '2020-04-23',   '프리미엄',    17000,   '2020-03-24',   'Y',   'Y',   'Y')
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('T2',   100052,   '카드',   '2022-10-15',   '2022-11-14',   '베이직',   9000   ,'2021-05-05'   ,'N'   ,'Y',   'N')
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('V1'   ,100065   ,'카드',   '2022-10-16'   ,'2022-11-15',   '스탠다드',   12500,   '2019-09-20',   'N',   'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('N4',   100047,   '계좌이체',   '2022-10-19',   '2022-11-18',   '프리미엄',   17000,   '2020-10-23',   'N',   'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('V2',   '100057',   '카드',   '2022-10-18',   '2022-11-17',   '베이직',   9000,   '2020-02-02',   'N',   'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('T3',   100054,   '핸드폰',   '2022-10-14',   '2022-11-13',   '스탠다드',   12500,   '2022-05-06',   'N',   'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('W1',   100085,   '카드',   '2022-10-16',   '2022-11-15',   '베이직',   7900,   '2016-02-01',   'N',   'N',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('N5',   100062   ,'무통장입금',   '2022-10-14',   '2022-11-13',   '스탠다드'   ,13500,   '2016-02-20',   'N',   'N',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('V3',   200021,   '무통장입금',   '2022-10-15',   '2022-11-14',   '프리미엄'   ,16000   ,'2022-03-24'   ,'N',   'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('P1',   200047,   '카드',   '2022-01-10',   '2022-02-09',   '베이직',   4900   ,'2022-01-10',   'Y'   ,'Y'   ,'Y')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('N6'   ,200024   ,'핸드폰'   ,'2022-10-07',   '2022-11-06',   '스탠다드',   13500   ,'2019-08-27',   'N'   ,'Y',   'N')
+
+INSERT INTO member_management (member_number, approval_number, payment_method, payment_date, exoiration_date, membership, price, join_date, dormant_account, adult_certification, withdrawal_status)
+VALUES ('D1',   '300045',   '핸드폰',   '2021-11-12',   '2021-12-11'   ,'베이직'   ,'9900'   ,'2021-11-12',   'Y'   ,'Y'   ,'N'
+)
