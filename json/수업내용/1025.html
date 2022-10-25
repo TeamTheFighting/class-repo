@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //JSON(Java Script Object Notaion) 배워보기
+    //JSON은 데이터 형식
+    var apple = {
+      이름: '홍길동',
+      나이: 30,
+    };
+    /*JSON은 Key와 Value로 구성
+    Key : 이름, 나이
+    Value : 홍길동, 30
+    Key는 데이터베이스에 PK처럼 중복될 수 없다.
+    Value는 중복 가능!
+    */
+    console.log(apple.이름); //홍길동 출력
+    console.log(apple.나이); //나이 출력
+
+    var data = {
+      name: '홍길동',
+      money: 400,
+      bank: '카카오뱅크',
+    };
+    //문제 1. bank와 money 출력하기
+    console.log(data.money);
+    console.log(data.bank);
+
+    /*json value에 오는 데이터 타입
+        int, double, string, boolean, array, json
+        json도 데이터 타입!
+    */
+    var data2 = {
+      이름: '신짱구',
+      나이: 40,
+      취미: ['등산', '게임', '독서', '헬스'],
+      결혼여부: false,
+      키: 182.5,
+      가족: {
+        아빠이름: '신영만',
+        엄마이름: '봉미선',
+      },
+    };
+    //문제2. 짱구에 결혼여부와 키 출력하시오.
+    console.log(data2.결혼여부);
+    console.log(data2.키);
+    //문제3. 짱구에 취미를 모두 출력하시오.
+    console.log(data2.취미[0]); //0번째 취미
+
+    //for문을 이용해서 json value가 배열인 값 조회하기
+    for (var i = 0; i < data2.취미.length; i++) {
+      console.log(data2.취미[i]);
+    }
+
+    //문제4. 짱구에 가족 중 아빠이름을 출력하시오.
+    console.log(data2.가족.아빠이름);
+
+    var data3 = {
+      name: '보노보노',
+      money: [10, 50, 80, 90],
+    };
+    //문제5. 보노보노가 가지고 있는 돈을 모두 더한 값은?
+    var sum = 0; //보노보노 돈 총합 넣을 변수
+    for (var i = 0; i < data3.money.length; i++) {
+      sum += data3.money[i];
+    }
+    console.log('포로리야~ ' + sum);
+  </script>
+</html>
