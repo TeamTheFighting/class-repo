@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      id="name"
+      type="text"
+      placeholder="이름을 입력해주세요!"
+      value="뚱인데요"
+    />
+    <h3>해외 영화 검색하기</h3>
+    <input id="search" type="text" placeholder="검색어를 입력해주세요..." />
+    <select id="type">
+      <option value="movie">movie</option>
+      <option value="series">series</option>
+      <option value="episode">episode</option>
+    </select>
+    <button onclick="doSearch()">영화 검색</button>
+  </body>
+  <!-- Jquery CDN download -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    //바닐라 스크립트로 input value 출력하기
+    var name = document.getElementById('name').value;
+    //console.log('이름은 ? ' + name);
+    //제이쿼리롤 input value 출력하기
+    var name2 = $('#name').val();
+    //console.log('제이쿼리로 가져온 이름은 ? ' + name2);
+
+    //영화 사이트 Key
+    //상수값은 변수이름을 대문자로 작성한다.
+    //카멜표기법이 아닌 언더바로 표기한다.
+    const API_KEY = '764ed67';
+    //영화 사이트 조회하기
+    function doSearch() {
+      //검색내용과 타입 가져오기 (제이쿼리로)
+      var search = $('#search').val();
+      var type = $('#type').val();
+      //ajax : 백엔드와 통신하기 위한 제이쿼리 메소드
+      //에이젝스,아작스,아약스 개발자 마다 다르게 부른다...
+      //GET : 조회할 때 사용하는 Type 중 하나
+      //dataType : 서버와 json으로 주고 받겠다.
+      //success : 서버와 요청 성공시 실행!
+      $.ajax({
+        url:
+          'http://www.omdbapi.com/?apiKey=' +
+          API_KEY +
+          '&s=' +
+          search +
+          '&type=' +
+          type +
+          '',
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          console.log(response);
+        },
+      });
+    }
+  </script>
+</html>
