@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #ececec;
+  margin: 50px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 42px;
+}
+
+.movie-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.series-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  flex-basis: 17%;
+}
+
+.poster {
+  width: 100px;
+  height: auto;
+}
