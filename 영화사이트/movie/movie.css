@@ -3,18 +3,20 @@ body {
   padding: 0;
   box-sizing: border-box;
   transition: 0.3s;
+  background-color: #141414;
 }
 
 .container {
   padding: 20px;
   height: auto;
-  background-color: #ececec;
-  margin: 50px auto;
+  margin: 15px auto;
 }
 
-.title {
+.site-title {
   text-align: center;
-  font-size: 42px;
+  font-size: 38px;
+  color: #e50914;
+  font-weight: 400;
 }
 
 .movie-row {
@@ -39,12 +41,15 @@ body {
 }
 
 .title {
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 0;
   font-size: 22px;
+  color: #fff;
 }
 
 .year {
   text-align: center;
   font-size: 18px;
+  color: #fff;
 }
