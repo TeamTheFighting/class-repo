@@ -15,35 +15,55 @@
       <div class="movie-row">
         <div class="item">
           <div id="movie-0" class="poster"></div>
+          <h4 id="movie-title-0" class="title"></h4>
+          <p id="movie-year-0" class="year"></p>
         </div>
         <div class="item">
           <div id="movie-1" class="poster"></div>
+          <h4 id="movie-title-1" class="title"></h4>
+          <p id="movie-year-1" class="year"></p>
         </div>
         <div class="item">
           <div id="movie-2" class="poster"></div>
+          <h4 id="movie-title-2" class="title"></h4>
+          <p id="movie-year-2" class="year"></p>
         </div>
         <div class="item">
           <div id="movie-3" class="poster"></div>
+          <h4 id="movie-title-3" class="title"></h4>
+          <p id="movie-year-3" class="year"></p>
         </div>
         <div class="item">
           <div id="movie-4" class="poster"></div>
+          <h4 id="movie-title-4" class="title"></h4>
+          <p id="movie-year-4" class="year"></p>
         </div>
       </div>
       <div class="series-row">
         <div class="item">
           <div id="series-0" class="poster"></div>
+          <h4 id="series-title-0" class="title"></h4>
+          <p id="series-year-0" class="year"></p>
         </div>
         <div class="item">
           <div id="series-1" class="poster"></div>
+          <h4 id="series-title-1" class="title"></h4>
+          <p id="series-year-1" class="year"></p>
         </div>
         <div class="item">
           <div id="series-2" class="poster"></div>
+          <h4 id="series-title-2" class="title"></h4>
+          <p id="series-year-2" class="year"></p>
         </div>
         <div class="item">
           <div id="series-3" class="poster"></div>
+          <h4 id="series-title-3" class="title"></h4>
+          <p id="series-year-3" class="year"></p>
         </div>
         <div class="item">
           <div id="series-4" class="poster"></div>
+          <h4 id="series-title-4" class="title"></h4>
+          <p id="series-year-4" class="year"></p>
         </div>
       </div>
     </div>
@@ -80,6 +100,8 @@
             var html = '<img src="' + posterUrl + '">';
             //id가 movie-0 ~ movie-4 인 태그에 영화 포스터사진 append 하기!
             $('#series-' + i).append(html);
+            $('#series-title-' + i).append(response.Search[i].Title);
+            $('#series-year-' + i).append(response.Search[i].Year);
           }
         },
       });
@@ -107,6 +129,8 @@
             var html = '<img src="' + posterUrl + '">';
             //id가 movie-0 ~ movie-4 인 태그에 영화 포스터사진 append 하기!
             $('#movie-' + i).append(html);
+            $('#movie-title-' + i).append(response.Search[i].Title);
+            $('#movie-year-' + i).append(response.Search[i].Year);
           }
         },
       });
