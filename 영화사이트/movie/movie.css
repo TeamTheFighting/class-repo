@@ -3,15 +3,15 @@ body {
   padding: 0;
   box-sizing: border-box;
   transition: 0.3s;
-  background-color: #141414;
   font-family: 'Open Sans', sans-serif;
 }
-
 .container {
   position: relative;
-  padding: 20px;
   height: auto;
-  margin: 15px auto;
+}
+.movie-list {
+  padding: 20px;
+  background-color: #141414;
 }
 
 .site-title {
@@ -63,11 +63,10 @@ body {
   visibility: hidden;
   background-color: #141414;
   top: 100px;
-  left: 100px;
   display: flex;
-  width: 1700px;
+  width: auto;
   margin: 100px auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 40px 0;
   color: #fff;
   font-weight: 400;
@@ -76,13 +75,22 @@ body {
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
 }
 
+.back {
+  flex-basis: 10%;
+}
+.section-left {
+  flex-basis: 55%;
+}
+.section-right {
+  flex-basis: 25%;
+}
+
 .back a {
   text-decoration: none;
   color: #e74a3b;
   font-size: 22px;
   font-weight: 600;
 }
-
 .movie-title {
   font-size: 40px;
   color: #fff;
