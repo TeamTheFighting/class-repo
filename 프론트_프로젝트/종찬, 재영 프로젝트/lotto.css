@@ -1,0 +1,334 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #212121;
+}
+#main_wrap {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.rsp_wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.game_title {
+  width: 500px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  margin: 0 auto;
+}
+.margins {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.rsp_img {
+  width: 300px;
+  height: 300px;
+  line-height: 250px;
+  background-color: antiquewhite;
+  border-radius: 300px;
+  text-align: center;
+  font-size: 220px;
+}
+.com_wrap {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+#result1,
+#result2 {
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-size: 60px;
+}
+.user_wrap {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.rock {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+}
+.scissors {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+}
+.paper {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+}
+.user_wrap button {
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 0;
+  padding: 0;
+  border-radius: 300px;
+  border: 0;
+  font-size: 180px;
+  cursor: pointer;
+}
+#rock_bt {
+  background-color: gold;
+}
+#scissors_bt {
+  background-color: aquamarine;
+}
+#paper_bt {
+  background-color: lightcoral;
+}
+#rock_bt:hover {
+  transition: 0.5s;
+  font-size: 220px;
+}
+#scissors_bt:hover {
+  transition: 0.5s;
+  font-size: 220px;
+}
+#paper_bt:hover {
+  transition: 0.5s;
+  font-size: 220px;
+}
+.dice_wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 50px;
+}
+.dice_wrap .com_wrap {
+  width: 700px;
+  height: 200px;
+}
+.dice_wrap .user_wrap {
+  width: 700px;
+  height: 200px;
+}
+.com_dice {
+  width: 200px;
+  height: 200px;
+}
+.com_dice img {
+  width: 200px;
+  height: 200px;
+}
+.user_dice {
+  width: 200px;
+  height: 200px;
+}
+.user_dice img {
+  width: 200px;
+  height: 200px;
+}
+.dice_bt_wrap {
+  width: 700px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.dice_result_wrap {
+  width: 700px;
+  height: 80px;
+  display: flex;
+  margin-bottom: 30px;
+}
+.score_wrap {
+  width: 300px;
+  height: 80px;
+}
+#com_score {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+#user_score {
+  width: 300px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+#dice_result {
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 40px;
+}
+.dice_start {
+  width: 370px;
+  height: 50px;
+  margin: 0 auto;
+}
+.dice_start button {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  background-color: royalblue;
+  cursor: pointer;
+}
+.lotto_wrap {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+.chk_lotto_box {
+  width: 1200px;
+  height: 450px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.lotto_box {
+  width: 370px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 500px;
+  text-align: center;
+}
+.lotto_img_box {
+  width: 370px;
+  height: auto;
+}
+.lotto_img_box img {
+  max-width: 300px;
+  margin-left: 70px;
+}
+#lotto_result {
+  width: 370px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 30px;
+  color: white;
+}
+.lotto_result_box {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.lotto_select_box {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.lotto_content {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 30px;
+  color: white;
+}
+.lotto_num_ball {
+  width: 120px;
+  height: 100px;
+}
+.lotto_num_ball img {
+  max-width: 120px;
+  margin: 8px 0;
+}
+.plus {
+  width: 50px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+}
+.bonus {
+  width: 120px;
+  height: 120px;
+}
+.bonus_img {
+  width: 120px;
+  height: 100px;
+}
+.bonus_text {
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.lotto_start {
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.lotto_start button {
+  width: 200px;
+  height: 100px;
+  font-size: 40px;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  background-color: royalblue;
+  cursor: pointer;
+}
+.lotto_check_wrap {
+  width: 500px;
+  height: 450px;
+  background-color: antiquewhite;
+}
+.chk_title {
+  width: 500px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: aliceblue;
+}
+.lotto_num_box {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.chk_box {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.chk_box input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.chk_num {
+  width: 20px;
+  height: 20px;
+  line-height: 15px;
+  font-size: 20px;
+}
