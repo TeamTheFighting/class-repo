@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    /* 마커 */
+    #mapwrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category,
+    .category * {
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+
+    .category {
+      position: absolute;
+      overflow: hidden;
+      top: 10px;
+      left: 10px;
+      width: 250px;
+      height: 50px;
+      z-index: 10;
+      border: 1px solid black;
+      font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+      font-size: 15px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    #home img {
+      width: 45px;
+      height: 40px;
+    }
+
+    .category .menu_selected {
+      background: #ff5f4a;
+      color: #fff;
+      border-left: 1px solid #915b2f;
+      border-right: 1px solid #915b2f;
+      margin: 0 -1px;
+    }
+
+    .category li {
+      list-style: none;
+      float: left;
+      width: 50px;
+      height: 45px;
+      padding-top: 5px;
+      cursor: pointer;
+    }
+
+    .category .ico_comm {
+      margin: 0 auto 2px;
+      width: 12px;
+      height: 16px;
+      background: url('https://t1.daumcdn.net/mapjsapi/images/2x/marker.png') no-repea t;
+    }
+
+    .category .ico_month {
+      background-position: -10px 0;
+    }
+
+    .category .ico_recommend {
+      background-position: -10px -36px;
+    }
+
+    .category .ico_tasty {
+      background-position: -10px -72px;
+    }
+
+    .category .ico_thema {
+      background-position: -10px -108px;
+    }
+
+    /* 커스텀 오버레이 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay_info {
+      border-radius: 6px;
+      margin-bottom: 13px;
+      float: left;
+      position: relative;
+      border: 1px solid #ccc;
+      border-bottom: 2px solid #ddd;
+      background-color: #fff;
+    }
+
+    .overlay_info:nth-of-type(n) {
+      border: 0;
+      box-shadow: 0px 1px 2px #888;
+    }
+
+    .overlay_info a {
+      display: block;
+      background: #d95050;
+      background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 36px 10px 14px;
+      font-size: 14px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .overlay_info .desc {
+      padding: 7px;
+      position: relative;
+      min-width: 120px;
+      height: 54px;
+    }
+
+    .overlay_info img {
+      vertical-align: top;
+      width: 33px;
+      height: 55px;
+    }
+
+    .overlay_info .address {
+      font-size: 13px;
+      color: #333;
+      position: absolute;
+      left: 46px;
+      right: 4px;
+      top: 5px;
+      white-space: normal;
+    }
+
+    .overlay_info:after {
+      content: '';
+      position: absolute;
+      margin-left: -11px;
+      left: 50%;
+      bottom: -12px;
+      width: 22px;
+      height: 12px;
+      background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png) no-repeat 0 bottom;
+    }
+
+    .category li:hover {
+      color: #fff;
+      background-color: #ff5f4a;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mapwrap">
+    <!-- 지도가 표시될 div -->
+    <div id="map" style="width: 100%; height: 100vh"></div>
+    <!-- 지도 위에 표시될 마커 카테고리 -->
+    <div class="category">
+      <ul>
+        <li id="home" onclick="home()">
+          <img src="../img/logo/daejeonlogo.png" alt="" />
+        </li>
+        <li id="monthTour" onclick="changeMarker('month')">
+          <span class="ico_comm ico_month"></span>
+          이달의<br />여행
+        </li>
+        <li id="recommendTour" onclick="changeMarker('recommend')">
+          <span class="ico_comm ico_recommend"></span>
+          추천<br />여행
+        </li>
+        <li id="tastyTour" onclick="changeMarker('tasty')">
+          <span class="ico_comm ico_tasty"></span>
+          맛집<br />투어
+        </li>
+        <li id="themaTour" onclick="changeMarker('thema')">
+          <span class="ico_comm ico_thema"></span>
+          테마<br />여행
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=87890f41b485a550fd1383dde2f1d4c9"></script>
+  <script src="mapdata.js"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(36.331519, 127.433637), // 지도의 중심좌표
+        level: 7, // 지도의 확대 레벨
+      };
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    var polyline = null;
+    var customOverlayArray = new Array();
+    const MAX_SIZE = 5;
+
+    changeMarker('init'); // 지도에 이달의 여행 마커가 보이도록 설정합니다
+    createStartMarker();
+
+    /* 출발마커 */
+    function createStartMarker() {
+      var startSrc =
+        'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/red_b.png'; // 출발 마커이미지의 주소입니다
+      var startSize = new kakao.maps.Size(50, 45); // 출발 마커이미지의 크기입니다
+      // 출발 마커이미지에서 마커의 좌표에 일치시킬 좌표를 설정합니다 (기본값은 이미지의 가운데 아래입니다)
+      var startOption = { offset: new kakao.maps.Point(20, 30) };
+
+      // 출발 마커 이미지를 생성합니다
+      var startImage = new kakao.maps.MarkerImage(
+        startSrc,
+        startSize,
+        startOption,
+      );
+
+      // 출발 마커를 생성합니다
+      var startMarker = new kakao.maps.Marker({
+        map: map, // 출발 마커가 지도 위에 표시되도록 설정합니다
+        position: travelOfTheMonthPositions[0],
+        image: startImage, // 출발 마커이미지를 설정합니다
+      });
+    }
+
+    // 이달의 여행 마커를 생성하고 이달의 여행 마커 배열에 추가하는 함수입니다
+    function createMonthMarkers() {
+      /* 선 잇기*/
+      polyline = new kakao.maps.Polyline({
+        endArrow: true,
+        path: travelOfTheMonthPositions, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 2, // 선의 두께 입니다
+        strokeColor: '#660033', // 선의 색깔입니다
+        strokeOpacity: 0.8, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid', // 선의 스타일입니다
+      });
+
+      // 지도에 선을 표시합니다
+      polyline.setMap(map);
+
+      // 커스텀오버레이
+      var content = '';
+      for (var i = 0; i < MAX_SIZE; i++) {
+        // 커스텀 오버레이에 표시할 내용입니다
+        // HTML 문자열 또는 Dom Element 입니다
+        content = '<div class="overlay_info">';
+        content +=
+          '    <a href="' +
+          travelOfTheMonthPlaces[i] +
+          '" target="_blank"><strong>' +
+          travelOfTheMonthName[i] +
+          '</strong></a>';
+        content += '    <div class="desc">';
+        content +=
+          '        <img src="' + travelOfTheMonthImages[i] + '" alt="">';
+        content +=
+          '        <span class="address">' +
+          travelOfTheMonthAddress[i] +
+          ' </span>';
+        content += '    </div>';
+        content += '</div>';
+        // 커스텀 오버레이를 생성합니다
+        var mapCustomOverlay = new kakao.maps.CustomOverlay({
+          position: travelOfTheMonthPositions[i],
+          content: content,
+          xAnchor: 0.5, // 커스텀 오버레이의 x축 위치입니다. 1에 가까울수록 왼쪽에 위치합니다. 기본값은 0.5 입니다
+          yAnchor: 1.14, // 커스텀 오버레이의 y축 위치입니다. 1에 가까울수록 위쪽에 위치합니다. 기본값은 0.5 입니다
+        });
+        // 커스텀 오버레이를 지도에 표시합니다
+        mapCustomOverlay.setMap(map);
+        customOverlayArray[i] = mapCustomOverlay;
+      }
+    }
+
+    /* 추천 여행 */
+    function createRecommendedTravelMarkers() {
+      polyline = new kakao.maps.Polyline({
+        endArrow: true,
+        path: recommendedTravelPositions,
+        strokeWeight: 2,
+        strokeColor: '#0033ff',
+        strokeOpacity: 0.8,
+        strokeStyle: 'solid',
+      });
+
+      polyline.setMap(map);
+
+      var content = '';
+      for (var i = 0; i < MAX_SIZE; i++) {
+        content = '<div class="overlay_info">';
+        content +=
+          '    <a href="' +
+          recommendedTravelPlaces[i] +
+          '" target="_blank"><strong>' +
+          recommendedTravelName[i] +
+          '</strong></a>';
+        content += '    <div class="desc">';
+        content +=
+          '        <img src="' + recommendedTravelImages[i] + '" alt="">';
+        content +=
+          '        <span class="address">' +
+          recommendedTravelAddress[i] +
+          ' </span>';
+        content += '    </div>';
+        content += '</div>';
+
+        var mapCustomOverlay = new kakao.maps.CustomOverlay({
+          position: recommendedTravelPositions[i],
+          content: content,
+          xAnchor: 0.5,
+          yAnchor: 1.14,
+        });
+        mapCustomOverlay.setMap(map);
+        customOverlayArray[i] = mapCustomOverlay;
+      }
+    }
+
+    /* 맛집 여행 */
+    function createGoodRestaurantMarkers() {
+      polyline = new kakao.maps.Polyline({
+        endArrow: true,
+        path: goodRestaurantPositions,
+        strokeWeight: 2,
+        strokeColor: '#cc0303',
+        strokeOpacity: 0.8,
+        strokeStyle: 'solid',
+      });
+
+      polyline.setMap(map);
+
+      var content = '';
+      for (var i = 0; i < MAX_SIZE; i++) {
+        content = '<div class="overlay_info">';
+        content +=
+          '    <a href="' +
+          goodRestaurantPlaces[i] +
+          '" target="_blank"><strong>' +
+          goodRestaurantName[i] +
+          '</strong></a>';
+        content += '    <div class="desc">';
+        content +=
+          '        <img src="' + goodRestaurantImages[i] + '" alt="">';
+        content +=
+          '        <span class="address">' +
+          goodRestaurantAddress[i] +
+          ' </span>';
+        content += '    </div>';
+        content += '</div>';
+
+        var mapCustomOverlay = new kakao.maps.CustomOverlay({
+          position: goodRestaurantPositions[i],
+          content: content,
+          xAnchor: 0.5,
+          yAnchor: 1.14,
+        });
+        mapCustomOverlay.setMap(map);
+        customOverlayArray[i] = mapCustomOverlay;
+      }
+    }
+
+    // 테마 여행
+    function createThemeTourPositionsMarkers() {
+      polyline = new kakao.maps.Polyline({
+        endArrow: true,
+        path: themeTourPositions,
+        strokeWeight: 2,
+        strokeColor: '#696969',
+        strokeOpacity: 0.8,
+        strokeStyle: 'solid',
+      });
+
+      polyline.setMap(map);
+
+      var content = '';
+      for (var i = 0; i < MAX_SIZE; i++) {
+        content = '<div class="overlay_info">';
+        content +=
+          '    <a href="' +
+          themeTourPlaces[i] +
+          '" target="_blank"><strong>' +
+          themeTourName[i] +
+          '</strong></a>';
+        content += '    <div class="desc">';
+        content += '        <img src="' + themeTourImages[i] + '" alt="">';
+        content +=
+          '        <span class="address">' + themeTourAddress[i] + ' </span>';
+        content += '    </div>';
+        content += '</div>';
+
+        var mapCustomOverlay = new kakao.maps.CustomOverlay({
+          position: themeTourPositions[i],
+          content: content,
+          xAnchor: 0.5,
+          yAnchor: 1.14,
+        });
+        mapCustomOverlay.setMap(map);
+        customOverlayArray[i] = mapCustomOverlay;
+      }
+    }
+
+    // 카테고리를 클릭했을 때 type에 따라 카테고리의 스타일과 지도에 표시되는 마커를 변경합니다
+    function changeMarker(type) {
+      var monthTour = document.getElementById('monthTour');
+      var recommendTour = document.getElementById('recommendTour');
+      var tastyTour = document.getElementById('tastyTour');
+      var themaTour = document.getElementById('themaTour');
+
+      // 이달의 여행 카테고리가 클릭됐을 때
+      if (type === 'init') {
+        createMonthMarkers();
+        // 이달의 여행 카테고리를 선택된 스타일로 변경하고
+        monthTour.className = 'menu_selected';
+        // 추천여행,맛집투어,테마여행 카테고리는 선택되지 않은 스타일로 바꿉니다
+        recommendTour.className = '';
+        tastyTour.className = '';
+        themaTour.className = '';
+      }
+      if (type === 'recommend') {
+        closeOverLay();
+        polyline.setMap(null);
+        createRecommendedTravelMarkers();
+        monthTour.className = '';
+        recommendTour.className = 'menu_selected';
+        tastyTour.className = '';
+        themaTour.className = '';
+      }
+      if (type === 'tasty') {
+        closeOverLay();
+        polyline.setMap(null);
+        createGoodRestaurantMarkers();
+        monthTour.className = '';
+        recommendTour.className = '';
+        tastyTour.className = 'menu_selected';
+        themaTour.className = '';
+      }
+      if (type === 'thema') {
+        closeOverLay();
+        polyline.setMap(null);
+        createThemeTourPositionsMarkers();
+        monthTour.className = '';
+        recommendTour.className = '';
+        tastyTour.className = '';
+        themaTour.className = 'menu_selected';
+      }
+      if (type === 'month') {
+        closeOverLay();
+        polyline.setMap(null);
+        createMonthMarkers();
+        monthTour.className = 'menu_selected';
+        recommendTour.className = '';
+        tastyTour.className = '';
+        themaTour.className = '';
+      }
+    }
+
+    function closeOverLay() {
+      for (var i = 0; i < customOverlayArray.length; i++) {
+        customOverlayArray[i].setMap(null);
+      }
+    }
+
+    /* home */
+    function home() {
+      location.href = '../1_main/main.html';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html,
+body {
+  cursor: url('../img/cursor.cur'), auto;
+}
+
+a,
+a:link {
+  cursor: url('../img/cursor.cur'), auto;
+}
+
+a:hover,
+a:focus {
+  cursor: url('../img/cursor.cur'), auto;
+}
+
+a:active {
+  cursor: url('../img/cursor.cur'), auto;
+}
+
+#container {
+  width: 100%;
+  height: auto;
+}
+
+/* 헤더 영역 */
+.top {
+  width: 100%;
+}
+
+#header {
+  width: 100%;
+  height: 120px;
+  /* position: fixed; */
+  background: white;
+}
+
+.header_wrap {
+  width: 100%;
+  /* 40px 에서 42px 수정 */
+  height: 42px;
+  background: rgb(246, 245, 245);
+}
+
+.global_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  height: 40px;
+}
+
+.util {
+  float: right;
+  width: 330px;
+  height: 30px;
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 6px 0;
+}
+
+.global_wrap .util li {
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  padding: 0 11px;
+  color: black;
+  font-size: 12px;
+  border-left: 1px solid #c4deff;
+}
+
+.util li:nth-child(1) {
+  border: 0px;
+}
+
+.util a {
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.search_box {
+  width: 100px;
+  display: flex;
+}
+
+.search {
+  position: relative;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+#search {
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+  cursor: url('../img/cursor.cur'), auto;
+}
+
+.search button {
+  position: absolute;
+  width: 30px;
+  height: 32px;
+  /* cursor: pointer; */
+  cursor: url('../img/cursor.cur'), auto;
+  border: none;
+  /* padding: 0; */
+}
+
+.header-main {
+  width: 100%;
+  height: 80px;
+}
+
+.hmain {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  width: 1200px;
+  height: 80px;
+  display: flex;
+}
+
+.header-logo {
+  width: 200px;
+  height: 80px;
+}
+
+.header-logo img {
+  width: 190px;
+  height: 80px;
+}
+
+.header-menu {
+  width: 1000px;
+  height: 80px;
+}
+
+.menu-list {
+  width: 1000px;
+  height: 80px;
+  list-style: none;
+}
+
+.menu-list li {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  width: 250px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  /* cursor: pointer; */
+}
+
+.menu-list li ul {
+  position: relative;
+  list-style: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.menu-list li ul li {
+  width: 0;
+  height: 0;
+  position: absolute;
+  float: none;
+  line-height: 0;
+}
+
+.menu-list li div:hover {
+  background: rgb(246, 245, 245);
+}
+
+.menu-list li:hover {
+  background: rgb(246, 245, 245);
+}
+
+.menu-list li:hover ul {
+  position: relative;
+  opacity: 1;
+  width: 250px;
+  height: auto;
+  z-index: 1;
+  top: -12px;
+  background: white;
+  opacity: 0.8;
+}
+
+.menu-list li:hover ul li {
+  position: relative;
+  width: 250px;
+  /* 30px 에서 50px로 조정 */
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  /* cursor: pointer; */
+  color: black;
+  background: white;
+  margin-top: 10px;
+}
+
+.menu-list li:hover ul li:hover {
+  /* background: rgb(187, 243, 187); */
+  /* 색상조정 확인바랍니다 */
+  background: rgb(170, 168, 168);
+  transition: 0.3s;
+}
+
+/* 센터영역 */
+#content {
+  width: 100%;
+  height: auto;
+}
+
+.content-main {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.content-img {
+  width: 100%;
+  height: 500px;
+  flex-basis: 20%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2px;
+  background: url(../img/bg/tour.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.main-img {
+  width: 1200px;
+  height: 500px;
+  flex-basis: 20%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main-img h1 {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  line-height: 500px;
+  font-family: 'Poor Story', cursive;
+  text-shadow: 2px 2px 1px gray;
+}
+
+/* 메인 */
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.tour-wrap {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tour-menu {
+  margin: 0 auto;
+  width: 1200px;
+  height: 70px;
+  position: relative;
+  background-color: rgb(237, 235, 235);
+}
+
+.tour-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: rgb(90, 90, 90);
+  font-size: 17px;
+  font-weight: 800;
+  width: 1200px;
+  height: 70px;
+  text-align: center;
+}
+
+.tour-list li {
+  float: left;
+  height: 70px;
+  line-height: 70px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.tour-list li:hover {
+  background: #ffff;
+}
+
+.tour-list a {
+  text-decoration: none;
+  color: black;
+  margin-top: 100px;
+}
+
+/* 투어라인 */
+.tourimg-wrap {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tour-line {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 1200px;
+  height: 1100px;
+}
+
+.tour-line h2 {
+  width: 1000px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.tour-line h2 a {
+  margin-top: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.map-searching {
+  width: 1200px;
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.map-searching a {
+  text-align: left;
+  display: inline-block;
+}
+
+.tour-title {
+  width: 1000px;
+}
+
+.map-search {
+  margin-left: 65px;
+  width: 115px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid black;
+  border: none;
+  border-radius: 10px;
+  background: rgb(241, 238, 238);
+  font-weight: 500;
+}
+
+.bi {
+  color: rgb(85, 147, 85);
+}
+
+.tour-line img {
+  margin-top: 50px;
+  width: 1200px;
+  height: 400px;
+  text-align: center;
+}
+
+.tour-img {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+  width: 170px;
+  height: 170px;
+  /* border: 1px solid black; */
+  background: rgb(85, 147, 85);
+  border-radius: 10px;
+}
+
+.img {
+  width: 170px;
+  height: 130px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.month-line,
+.recommend-line,
+.tasty-line,
+.thema-line {
+  margin-top: 25px;
+  width: 1200px;
+  height: 240px;
+}
+
+.month-line {
+  margin-top: 80px;
+}
+
+.thema-line {
+  margin-bottom: 100px;
+}
+
+/* 대전역 */
+.img1 {
+  background: url(../img/donggu/daejeonstation1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+/* 이달의 여행 */
+.img2 {
+  background: url(../img/junggu/owarld1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img3 {
+  background: url(../img/seogu/hanbat1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img4 {
+  background: url(../img/useonggu/museum.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img5 {
+  background: url(../img/useonggu/urimpark1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+/* 추천여행 */
+.img6 {
+  background: url(../img/seogu/yesul2.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img7 {
+  background: url(../img/useonggu/hanbittap.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img8 {
+  background: url(../img/daedeokGu/daecheonglake2.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img9 {
+  background: url(../img/donggu/centralmarket.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+/* 맛집투어 */
+.img10 {
+  background: url(../img/donggu/mr_o2.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img11 {
+  background: url(../img/daedeokGu/sundae3.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img12 {
+  background: url(../img/seogu/subok1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img13 {
+  background: url(../img/junggu/sunsimdang1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+/* 테마여행 */
+.img14 {
+  background: url(../img/donggu/uamhistoricpark3.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img15 {
+  background: url(../img/daedeokGu/dongchundang1.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img16 {
+  background: url(../img/seogu/dosan2.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.img17 {
+  background: url(../img/seogu/prehistoricsite2.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.subtitle {
+  margin-top: 7px;
+  font-size: 17px;
+  font-weight: 700px;
+  color: white;
+}
+
+/* 푸터영역*/
+#footer {
+  width: 100%;
+  height: 80px;
+  background: rgb(246, 245, 245);
+}
+
+.foot {
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.foot ul {
+  width: 900px;
+  list-style: none;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+}
+
+.foot ul li {
+  color: gray;
+  margin-top: 35px;
+  margin-left: 15px;
+  padding-right: 13px;
+  font-size: 14px;
+  border-right: 1px solid gray;
+}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* html  element  css 초기화  */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+ul,
+form,
+footer,
+section,
+header,
+p,
+pre,
+address,
+nav,
+menu,
+dl,
+ol,
+li,
+dd,
+dt,
+article {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul,
+li {
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+  vertical-align: baseline;
+  /* color: #fff; */
+  background: transparent;
+  /* background: transparent; 투명한 */
+}
+img {
+  vertical-align: top;
+}
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  vertical-align: top;
+  appearance: none;
+  border: 1px solid #3976e7;
+}
