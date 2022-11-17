@@ -1,237 +1,233 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대전에서 여행하~슈</title>
+    <link rel="icon" href="../img/logo/daejeonlogo.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <script src="mainsearch.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>대전에서 여행하~슈</title>
-  <link rel="icon" href="../img/logo/daejeonlogo.png" />
-  <link rel="stylesheet" href="main.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-  <script src="mainsearch.js"></script>
-</head>
-
-<body onload="textchange()">
-  <div id="container">
-    <div id="header">
-      <div class="header_wrap">
-        <div class="global_wrap">
-          <ul class="util">
-            <li><a href="https://www.daejeon.go.kr/">대전광역시청</a></li>
-            <li>
-              <div class="search_box">
-                <div class="search">
-                  <input onkeyup="enterkey()" type="text" id="search" name="search" placeholder="검색" />
-                  <button id="bt"><i class="bi bi-search"></i></button>
+  <body onload="textchange()">
+    <div id="container">
+      <div id="header">
+        <div class="header_wrap">
+          <div class="global_wrap">
+            <ul class="util">
+              <li><a href="https://www.daejeon.go.kr/">대전광역시청</a></li>
+              <li>
+                <div class="search_box">
+                  <div class="search">
+                    <input onkeyup="enterkey()" type="text" id="search" name="search" placeholder="검색" />
+                    <button id="bt"><i class="bi bi-search"></i></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-main">
+          <div class="hmain">
+            <div class="main">
+              <div class="header-logo">
+                <a href="../1_main/main.html"> <img src="../img/logo/hasyulogo.png" /></a>
+              </div>
+              <div class="header-menu">
+                <ul class="menu-list">
+                  <li>
+                    <a href="../2_gu_tour/dongGu.html">
+                      <div>우리구이야기</div>
+                    </a>
+                    <ul>
+                      <a href="../2_gu_tour/dongGu.html">
+                        <li>동구</li>
+                      </a>
+                      <a href="../2_gu_tour/jungGu.html">
+                        <li>중구</li>
+                      </a>
+                      <a href="../2_gu_tour/seoGu.html">
+                        <li>서구</li>
+                      </a>
+                      <a href="../2_gu_tour/yuseongGu.html">
+                        <li>유성구</li>
+                      </a>
+                      <a href="../2_gu_tour/daedeokGu.html">
+                        <li>대덕구</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../8_tourpage/tour.html">
+                      <div>투어</div>
+                    </a>
+                    <ul>
+                      <a href="../8_tourpage/tour.html#month">
+                        <li>이달의 여행</li>
+                      </a>
+                      <a href="../8_tourpage/tour.html#recommend">
+                        <li>추천 여행</li>
+                      </a>
+                      <a href="../8_tourpage/tour.html#tasty">
+                        <li>맛집 여행</li>
+                      </a>
+                      <a href="../8_tourpage/tour.html#thema">
+                        <li>테마여행</li>
+                      </a>
+                    </ul>
+                  </li>
+                  <a href="../9_festival/fastival.html">
+                    <div>
+                      <li>축제&행사</li>
+                    </div>
+                  </a>
+                  <a href="../10_storypage/story.html">
+                    <div>
+                      <li>대전이야기</li>
+                    </div>
+                  </a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="slider">
+          <img id="slider" src="../img/mainimg/sikjjangsan.jpg" />
+        </div>
+        <div class="title">
+          <div class="main-title">
+            <div class="ltitle">
+              <h2>투어 코스</h2>
+              <hr />
+            </div>
+            <div class="title-list">
+              <div class="list-main">
+                <div class="title-img">
+                  <div class="img-box img1"></div>
+                  <div class="img-txt">
+                    <h3>이달의 여행</h3>
+                    <div class="title-a">
+                      <a href="../8_tourpage/tour.html#month">
+                        <div class="a">바로가기</div>
+                      </a>
+                      <a href="../8_tourpage/map.html">
+                        <div class="a">추천경로</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="title-img">
+                  <div class="img-box img2"></div>
+                  <div class="img-txt">
+                    <h3>추천여행</h3>
+                    <div class="title-a">
+                      <a href="../8_tourpage/tour.html#month">
+                        <div class="a">바로가기</div>
+                      </a>
+                      <a href="../8_tourpage/map.html">
+                        <div class="a">추천경로</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="title-img">
+                  <div class="img-box img3"></div>
+                  <div class="img-txt">
+                    <h3>맛집투어</h3>
+                    <div class="title-a">
+                      <a href="../8_tourpage/tour.html#month">
+                        <div class="a">바로가기</div>
+                      </a>
+                      <a href="../8_tourpage/map.html">
+                        <div class="a">추천경로</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="title-img">
+                  <div class="img-box img4"></div>
+                  <div class="img-txt">
+                    <h3>테마 여행</h3>
+                    <div class="title-a">
+                      <a href="../8_tourpage/tour.html#month">
+                        <div class="a">바로가기</div>
+                      </a>
+                      <a href="../8_tourpage/map.html">
+                        <div class="a">추천경로</div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
+            </div>
+          </div>
+        </div>
+        <div class="title2">
+          <div class="main-title">
+            <div class="ltitle2">
+              <h2>투어안내</h2>
+              <hr />
+            </div>
+            <div class="title-list2">
+              <div class="list-main2">
+                <div class="call">
+                  <h2>1:1 전화상담</h2>
+                  <h3>042-271-3283</h3>
+                  <p>월-금 OPEN 09:00 / CLOSE 18:00</p>
+                  <p>주말은 운영하지 않습니다. 문의에 참고해주시기 바랍니다.</p>
+                </div>
+                <div class="dajeon-info">
+                  <h2>대전관광안내</h2>
+                  <a href="../10_storypage/story.html#">
+                    <div class="b">바로가기</div>
+                  </a>
+                </div>
+                <div class="dajeon-info">
+                  <h2>축제 소개</h2>
+                  <a href="../9_festival/fastival.html">
+                    <div class="b">바로가기</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="foot">
+          <ul>
+            <li>상호 : 대전투어</li>
+            <li>대표자 : 장이변</li>
+            <li>주소 : 대전광역시 중구 선화동</li>
+            <li>대표전화 : 042-271-3283</li>
+            <li>사업자번호 : 357-88-82139</li>
           </ul>
         </div>
       </div>
-      <div class="header-main">
-        <div class="hmain">
-          <div class="main">
-            <div class="header-logo">
-              <a href="../1_main/main.html">
-                <img src="../img/logo/hasyulogo.png" /></a>
-            </div>
-            <div class="header-menu">
-              <ul class="menu-list">
-                <li>
-                  <a href="../2_gu_tour/dongGu.html">
-                    <div>우리구이야기</div>
-                  </a>
-                  <ul>
-                    <a href="../2_gu_tour/dongGu.html">
-                      <li>동구</li>
-                    </a>
-                    <a href="../2_gu_tour/jungGu.html">
-                      <li>중구</li>
-                    </a>
-                    <a href="../2_gu_tour/seoGu.html">
-                      <li>서구</li>
-                    </a>
-                    <a href="../2_gu_tour/yuseongGu.html">
-                      <li>유성구</li>
-                    </a>
-                    <a href="../2_gu_tour/daedeokGu.html">
-                      <li>대덕구</li>
-                    </a>
-                  </ul>
-                </li>
-                <li>
-                  <a href="../8_tourpage/tour.html">
-                    <div>투어</div>
-                  </a>
-                  <ul>
-                    <a href="../8_tourpage/tour.html#month">
-                      <li>이달의 여행</li>
-                    </a>
-                    <a href="../8_tourpage/tour.html#recommend">
-                      <li>추천 여행</li>
-                    </a>
-                    <a href="../8_tourpage/tour.html#tasty">
-                      <li>맛집 여행</li>
-                    </a>
-                    <a href="../8_tourpage/tour.html#thema">
-                      <li>테마여행</li>
-                    </a>
-                  </ul>
-                </li>
-                <a href="../9_festival/fastival.html">
-                  <div>
-                    <li>축제&행사</li>
-                  </div>
-                </a>
-                <a href="../10_storypage/story.html">
-                  <div>
-                    <li>대전이야기</li>
-                  </div>
-                </a>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div id="content">
-      <div class="slider">
-        <img id="slider" src="../img/mainimg/sikjjangsan.jpg" />
-      </div>
-      <div class="title">
-        <div class="main-title">
-          <div class="ltitle">
-            <h2>투어 코스</h2>
-            <hr />
-          </div>
-          <div class="title-list">
-            <div class="list-main">
-              <div class="title-img">
-                <div class="img-box img1"></div>
-                <div class="img-txt">
-                  <h3>이달의 여행</h3>
-                  <div class="title-a">
-                    <a href="../8_tourpage/tour.html#month">
-                      <div class="a">바로가기</div>
-                    </a>
-                    <a href="../8_tourpage/map.html">
-                      <div class="a">추천경로</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="title-img">
-                <div class="img-box img2"></div>
-                <div class="img-txt">
-                  <h3>추천여행</h3>
-                  <div class="title-a">
-                    <a href="../8_tourpage/tour.html#month">
-                      <div class="a">바로가기</div>
-                    </a>
-                    <a href="../8_tourpage/map.html">
-                      <div class="a">추천경로</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="title-img">
-                <div class="img-box img3"></div>
-                <div class="img-txt">
-                  <h3>맛집투어</h3>
-                  <div class="title-a">
-                    <a href="../8_tourpage/tour.html#month">
-                      <div class="a">바로가기</div>
-                    </a>
-                    <a href="../8_tourpage/map.html">
-                      <div class="a">추천경로</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="title-img">
-                <div class="img-box img4"></div>
-                <div class="img-txt">
-                  <h3>테마 여행</h3>
-                  <div class="title-a">
-                    <a href="../8_tourpage/tour.html#month">
-                      <div class="a">바로가기</div>
-                    </a>
-                    <a href="../8_tourpage/map.html">
-                      <div class="a">추천경로</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="title2">
-        <div class="main-title">
-          <div class="ltitle2">
-            <h2>투어안내</h2>
-            <hr />
-          </div>
-          <div class="title-list2">
-            <div class="list-main2">
-              <div class="call">
-                <h2>1:1 전화상담</h2>
-                <h3>042-271-3283</h3>
-                <p>월-금 OPEN 09:00 / CLOSE 18:00</p>
-                <p>주말은 운영하지 않습니다. 문의에 참고해주시기 바랍니다.</p>
-              </div>
-              <div class="dajeon-info">
-                <h2>대전관광안내</h2>
-                <a href="../10_storypage/story.html#">
-                  <div class="b">바로가기</div>
-                </a>
-              </div>
-              <div class="dajeon-info">
-                <h2>축제 소개</h2>
-                <a href="../9_festival/fastival.html">
-                  <div class="b">바로가기</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div class="foot">
-        <ul>
-          <li>상호 : 대전투어</li>
-          <li>대표자 : 장이변</li>
-          <li>주소 : 대전광역시 중구 선화동</li>
-          <li>대표전화 : 042-271-3283</li>
-          <li>사업자번호 : 357-88-82139</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-<script>
-  var slide = 0;
-  var bangbang;
-  function textchange() {
-    if (slide == 0) {
-      document.getElementById('slider').src =
-        '../img/mainimg/sikjjangsan.jpg';
-      slide++;
-    } else if (slide == 1) {
-      document.getElementById('slider').src = '../img/mainimg/bomunsan.jpg';
-      slide++;
-    } else if (slide == 2) {
-      document.getElementById('slider').src = '../img/mainimg/randmark.jpg';
-      slide++;
-    } else {
-      document.getElementById('slider').src = '../img/mainimg/expo.jpg';
-      slide = 0;
+  </body>
+  <script>
+    var slide = 0;
+    var bangbang;
+    function textchange() {
+      if (slide == 0) {
+        document.getElementById('slider').src = '../img/mainimg/sikjjangsan.jpg';
+        slide++;
+      } else if (slide == 1) {
+        document.getElementById('slider').src = '../img/mainimg/bomunsan.jpg';
+        slide++;
+      } else if (slide == 2) {
+        document.getElementById('slider').src = '../img/mainimg/randmark.jpg';
+        slide++;
+      } else {
+        document.getElementById('slider').src = '../img/mainimg/expo.jpg';
+        slide = 0;
+      }
+      bangbang = setTimeout(textchange, 1500);
     }
-    bangbang = setTimeout(textchange, 1500);
-  }
-</script>
-
+  </script>
 </html>
